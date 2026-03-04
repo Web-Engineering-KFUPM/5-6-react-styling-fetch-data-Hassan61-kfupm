@@ -237,16 +237,16 @@ export default function App() {
      Dependency array MUST be: [searchTerm, users]
      ========================================================= */
 useEffect(() => {
-    // TODO 2.2: Implement filtering users here
-    if (searchTerm.trim() === "") {
-      setFilteredUsers(users);
-    } else {
-      const filtered = users.filter(user => 
-        user.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredUsers(filtered);
-    }
-  }, [searchTerm, users]);
+  // TODO 2.2: Implement filtering users here
+  if (searchTerm.trim() === "") {
+    setFilteredUsers(users);
+  } else {
+    const filtered = users.filter(user => 
+      user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredUsers(filtered);
+  }
+}, [searchTerm, users]);
 
   // Modal handlers (already complete)
   function handleUserClick(user) {
